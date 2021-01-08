@@ -3,12 +3,13 @@ import numpy as np
 import random
 import time
 import math                    
+import random                                       
 
 n_iterations = 100
-n_particles = 10000
-c1 = 2
-c2 = 2
-W = 0.5
+n_particles = 10
+c1 = 0.1
+c2 = 0.1
+W = 0.2
 
 class Particle():
     def __init__(self):
@@ -30,12 +31,7 @@ class Space():
         self.gbest_value = float('inf')
 
     def fitness(self, particle):
-        #return (particle.position[0] - 20) ** 2 + (particle.position[1] - 20) ** 2 + 1
-        a = 0
-        #time.sleep(0.01) # to make this artificially expensive
-        for i in particle.position:
-            a+= abs((math.sin(i)*i) + (0.1*i))
-        return a
+        return (particle.position[0] - 20) ** 2 + (particle.position[1] - 20) ** 2 + 1
 
     def update_pbest(self):
         for particle in self.particles:
