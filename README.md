@@ -33,5 +33,5 @@ mpirun -np P --npernode 1 --hostfile hosts ./mpi N D ITER
 Executing PSO_CUDA:
 ```C
 ./PSO
-Modify N D ITER in kernel.h
+//Modify N D ITER in kernel.h
 ```
