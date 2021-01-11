@@ -29,3 +29,9 @@ mpirun -np P --npernode 1 --hostfile hosts ./mpi N D ITER
 // D = Dimensions
 // ITER = Num of Iterations
 ```
+
+Executing PSO_CUDA:
+```C
+./PSO
+Modify N D ITER in kernel.h
+```
